@@ -1,0 +1,74 @@
+#
+# [ASteCA v0.2.4-dev]
+#
+# Created:  [2019-01-12 19:34:46]
+# Modified: [2019-01-12 19:49:00]
+#
+# NAME: Cluster's name.
+# c_x: Cluster's x center coordinate.
+# c_y: Cluster's y center coordinate.
+# r_cl: Cluster's radius.
+# e_rcl: Cluster's radius error.
+# r_c: Core radius (3-P King profile).
+# e_rc: Core radius error.
+# r_t: Tidal radius (3-P King profile).
+# e_rt: Tidal radius error.
+# kcp: King's profile concentration parameter.
+#
+# CI: 'Contamination index' is a  measure of the contamination of field
+#      stars in the cluster region. The closer to 1, the more contaminated 
+#      the cluster region is.
+# n_memb_k: Approximate number of cluster's members obtained integrating the
+#         fitted 3-P King profile (if it converged).
+# n_memb: Approximate number of cluster's members assuming a uniform
+#       background.
+# n_memb_da: Approximate number of cluster's members obtained via the DA
+#          algorithm.
+# memb_par: Members parameter comparing the approximate structural number of
+#           members ('n_memb') with the approximate photometric number of
+#           members ('n_memb_da').
+# a_f: Fraction of cluster's area that is present in frame.
+#
+# Parameters values are in the sense: mean, MAP/ML, median.
+# Parameters uncertainties are: 16th, 84th percentiles.
+# z: Metallicity value.
+# a: log(age).
+# e: extinction E(B-V).
+# d: Distance modulus.
+# M: Total initial mass.
+# b: Binary fraction.
+#
+# M1 Indicates that the center was set manually.
+# M2 Indicates that the radius was set manually.
+#
+# f1 The standard deviation for either center coordinate is larger than 10%
+#    of that coordinate's range.
+# f2 The background value is smaller than a third of the maximum radial
+#    density value.
+# f3 Not enough points found stabilized around the background value -->
+#    clust_rad was set to the middle value in the density profile.
+# f4 The delta range around the background used to attain the stable
+#    condition to determine the radius is greater than 10%%. This indicates
+#    a possible variable background.
+# f5 The process to fit a 3-P King profile to the density points did not
+#    converge or did so to a tidal radius beyond the ranges of the frame.
+# f6 The number of approximate structural cluster members ('n_memb') is <10.
+# f7 The number of approximate structural and photometric cluster members
+#    differ greatly --> abs(n_memb_par) > 0.33.
+#
+# FC (flags count): Sum of all the flags values. The bigger this value the
+#    more likely it is that there's a problem with the frame, ie: no
+#    cluster, more than one cluster present in the frame, variable or too
+#    crowded field, etc.
+#
+#NAME                 c_x      c_y     r_cl    e_rcl      r_c     e_rc      r_t     e_rt      kcp      CI   n_memb_k     n_memb  n_memb_da  memb_par     a_f     z_mean      z_MAP   z_median       16th       84th        std     a_mean      a_MAP   a_median       16th       84th        std     e_mean      e_MAP   e_median       16th       84th        std     d_mean      d_MAP   d_median       16th       84th        std     M_mean      M_MAP   M_median       16th       84th        std     b_mean      b_MAP   b_median       16th       84th        std      M1 M2  f1 f2 f3 f4 f5 f6 f7  FC
+GAIA2_1_01              0        0        0        0       -1       -1       -1       -1    -1.00    0.79         -1        131        150     -0.07    1.00   0.013974   0.024283   0.016066   0.006257   0.019233  0.0059733      9.572      9.543      9.524      9.496      9.711     0.1031      0.261      0.244       0.26      0.253      0.271     0.0114     13.891     13.851     13.908     13.825     13.954   0.068882     2200.0     2300.0     2100.0     2000.0     2400.0    370.529        0.0        0.0        0.0        nan        nan        nan       0  0   0  1  0  0  1  0  0   2
+GAIA2_2_03              0        0        0        0       -1       -1       -1       -1    -1.00    0.79         -1        131        150     -0.07    1.00  0.0097245  0.0059871  0.0075326  0.0059944    0.01679  0.0054905      9.703      9.713      9.737      9.597       9.79    0.09343      0.253      0.256       0.25      0.244      0.267     0.0132     13.834      13.88     13.822      13.77     13.942   0.083168     2200.0     2100.0     2100.0     2100.0     2400.0    221.116        0.0        0.0        0.0        nan        nan        nan       0  0   0  1  0  0  1  0  0   2
+GAIA2_3_05              0        0        0        0       -1       -1       -1       -1    -1.00    0.79         -1        131        150     -0.07    1.00  0.0089126   0.010931   0.010684  0.0036588   0.013674  0.0053377      9.635      9.539      9.556      9.519      9.789     0.1232      0.265      0.269      0.265      0.259      0.271    0.00749     13.867     13.882     13.862     13.835      13.93   0.055079     2100.0     1400.0     1600.0     1400.0     2700.0    722.177        0.0        0.0        0.0        nan        nan        nan       0  0   0  1  0  0  1  0  0   2
+GAIA2_4_07              0        0        0        0       -1       -1       -1       -1    -1.00    0.79         -1        131        150     -0.07    1.00   0.005822  0.0057408  0.0047425  0.0038398  0.0070145  0.0036251      9.737      9.757      9.738      9.691      9.783    0.05259      0.264      0.255      0.264      0.252      0.275     0.0107     13.893     13.914     13.898     13.856     13.947   0.055997     2500.0     2400.0     2500.0     2400.0     2700.0    159.999        0.0        0.0        0.0        nan        nan        nan       0  0   0  1  0  0  1  0  0   2
+# Older runs have fewer columns
+#NAME                 c_x      c_y     r_cl    e_rcl      r_c     e_rc      r_t     e_rt      kcp      CI   n_memb_k     n_memb  n_memb_da  memb_par     a_f     z_mean      z_MAP   z_median       16th       84th     a_mean      a_MAP   a_median       16th       84th     e_mean      e_MAP   e_median       16th       84th     d_mean      d_MAP   d_median       16th       84th     M_mean      M_MAP   M_median       16th       84th     b_mean      b_MAP   b_median       16th       84th      M1 M2  f1 f2 f3 f4 f5 f6 f7  FC
+GAIA2_1_02              0        0        0        0       -1       -1       -1       -1    -1.00    0.79         -1        131        150     -0.07    1.00   0.045878   0.038421   0.046452   0.036639    0.05553      9.502      9.586      9.477      9.419      9.614      0.233      0.218       0.23      0.218      0.251      13.86     13.762      13.88     13.762     13.993     2000.0     2200.0     2000.0     1800.0     2200.0        0.0        0.0        0.0        nan        nan       0  0   0  1  0  0  1  0  0   2
+GAIA2_2_04              0        0        0        0       -1       -1       -1       -1    -1.00    0.79         -1        131        150     -0.07    1.00   0.044623   0.051289   0.045731   0.036332   0.050385      9.568      9.623      9.567      9.468       9.63      0.219        0.2      0.222      0.202      0.235     13.849     13.723     13.894     13.707     13.963     2100.0     2400.0     2200.0     1700.0     2400.0        0.0        0.0        0.0        nan        nan       0  0   0  1  0  0  1  0  0   2
+GAIA2_3_06              0        0        0        0       -1       -1       -1       -1    -1.00    0.79         -1        131        150     -0.07    1.00   0.043165   0.031518   0.042768    0.03291    0.05521      9.625      9.606      9.654      9.574      9.663      0.213      0.228      0.212      0.195      0.227     13.729     13.673     13.736     13.537     13.913     2600.0     2000.0     2800.0     2000.0     3000.0        0.0        0.0        0.0        nan        nan       0  0   0  1  0  0  1  0  0   2
+GAIA2_4_08              0        0        0        0       -1       -1       -1       -1    -1.00    0.79         -1        131        150     -0.07    1.00   0.040498   0.042717    0.03746   0.033428   0.048154      9.496      9.435      9.465      9.435        9.6      0.235      0.244      0.244      0.214      0.246     13.926     13.977     13.976     13.854     13.983     2100.0     2200.0     2100.0     2100.0     2200.0        0.0        0.0        0.0        nan        nan       0  0   0  1  0  0  1  0  0   2
