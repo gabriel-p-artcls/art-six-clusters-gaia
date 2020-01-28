@@ -1,8 +1,11 @@
 
 # Photometric analysis of Gaia + PS1 data
 
+0. [Synthetic clusters analysis](#synth)
 1. [Raw data processing](#raw)
 2. [Data analysis with ASteCA](#dataanalysis)
+3. [Final remarks](#finalremarks)
+4. [Old analysis](#oldanalysis)
     1. [1st run](#1run)
     1. [2nd run](#2run)
     1. [3rd run](#3run)
@@ -22,7 +25,12 @@
     1. [17th run](#17run)
     1. [18th run](#17run)
     1. [19th run](#17run)
-3. [Final remarks](#finalremarks)
+
+
+<a name="synth"></a>
+## Synthetic clusters analysis
+
+The Bayesian method to estimate the fundamental parameters was tested on 108 synthetic clusters. These are stored in the `0_synth_gaia_clusts_test/input/` folder. The `output/` folder is kept out of the repo because it is too large (~1.2 Gb).
 
 
 <a name="raw"></a>
@@ -82,6 +90,17 @@ The published age and distance values for the clusters are:
 |  GAIA7   |    7.85  | 13.1 |
 
 The GAIA7 cluster also is said to be affected by a large extinction: E_BV=1.2.
+
+
+
+
+
+
+
+<a name="oldanalysis"></a>
+## Old analysis
+
+This is the original analysis performed between late 2018 and early 2019.
 
 
 <a name="1run"></a>
