@@ -1,36 +1,17 @@
 
-# Photometric analysis of Gaia + PS1 data
+# Photometric analysis of Gaia DR2 + PS1 data
 
 0. [Synthetic clusters analysis](#synth)
 1. [Raw data processing](#raw)
 2. [Data analysis with ASteCA](#dataanalysis)
 3. [Final remarks](#finalremarks)
-4. [Old analysis](#oldanalysis)
-    1. [1st run](#1run)
-    1. [2nd run](#2run)
-    1. [3rd run](#3run)
-    1. [4th run](#4run)
-    1. [5th run](#5run)
-    1. [6th run](#6run)
-    1. [7th run](#7run)
-    1. [8th run](#8run)
-    1. [9th run](#9run)
-    1. [10th run](#10run)
-    1. [11th run](#11run)
-    1. [12th run](#12run)
-    1. [13th run](#13run)
-    1. [14th run](#14run)
-    1. [15th run](#15run)
-    1. [16th run](#16run)
-    1. [17th run](#17run)
-    1. [18th run](#17run)
-    1. [19th run](#17run)
+
 
 
 <a name="synth"></a>
 ## Synthetic clusters analysis
 
-The Bayesian method to estimate the fundamental parameters was tested on 108 synthetic clusters. These are stored in the `0_synth_gaia_clusts_test/input/` folder. The `output/` folder is kept out of the repo because it is too large (~1.2 Gb).
+This part of the analysis was performed in the old run but removed from this one.
 
 
 <a name="raw"></a>
@@ -39,12 +20,9 @@ The Bayesian method to estimate the fundamental parameters was tested on 108 syn
 The data was downloaded and prepared as described in the following steps, and
 stored in the enumerated folders:
 
-* `1_queried_gaia_data/` Data obtained with the `GaiaQuery` code, which
-also adds colors and its errors.
-* `2_raw_PS1_data/` Data obtained with the `CatalogMatch` code, using the GAIA
-data from the 1st step as input.
-* `3_matched_data/` Output after running the `CatalogMatch` code, using the GAIA
-data from the 1st step as input and cross-matching with the raw PS1 data from
+* `1_queried_gaia_data/` Gaia DR2 data obtained with the `GaiaQuery` code, which also adds colors and its errors.
+* `2_raw_PS1_data/` Data obtained with the `CatalogMatch` code, using the data from the 1st step as input.
+* `3_matched_data/` Output after running the `CatalogMatch` code, using the data from the 1st step as input and cross-matching with the raw PS1 data from
 the 2nd step.
 * `4_final_raw_data` Data that was actually processed by `ASteCA`. It is the
 `_match.dat` output from `CatalogMatch` processed by the `GAIA_PS1_comb.py`
